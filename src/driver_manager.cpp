@@ -36,12 +36,30 @@ CDriverManager::CDriverManager(
 }
 
 
+/*
+ * Parse the url and extract the information neccessary to connect PostgreSQL
+ * database which is host, port, dbname, user and password.
+ *
+ * postgresql://localhost/test?user=foo&password=secret
+ *
+ * Using the extracted information return a CPQConnection object pointer.
+ */
 CPQConnection *
 CDriverManager::getConnection(const char *url)
 {
 
 }
 
+
+/*
+ * Parse the url and extract the information neccessary to connect PostgreSQL
+ * database which is host, port and database and uses the user and password
+ * parameter.
+ *
+ * postgresql://localhost/test
+ *
+ * Using the extracted information return a CPQConnection object pointer.
+ */
 CPQConnection *
 CDriverManager::getConnection(const char *url, const char *user, const char *password)
 {

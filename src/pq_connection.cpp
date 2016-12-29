@@ -29,6 +29,10 @@
 
 #include "connction.h"
 
+/*
+ * Connect to PostgreSQL server by using the provieded information. Throw an
+ * exception in case of any error.
+ */
 CPQCoonection::CPQConnection(const char *host,  
                string port, 
                string user,
@@ -49,6 +53,15 @@ CPQCoonection::CPQConnection(const char *host,
 
 	
 CPQConnection::~PQConnection();
+{
+
+}
+
+/*
+ * Create a CPQStatment object pointer and return.
+ */
+CPQStatment *
+CPQConnection::createStmt()
 {
 
 }

@@ -16,6 +16,10 @@ private:
   string        _time_out;
   string        _client_encoding;
 
+private:
+  int Connect()
+  void Disconnect();
+
 public:
   CPQConnection(const char *host,  
                string port, 
@@ -25,6 +29,9 @@ public:
                string time_out,
                string clinet_encoding);	
   virtual ~CPQConnection();
+
+  CPQStatment *createStmt();
+
 };
 
 #endif /* PQCONNECTION_H */
